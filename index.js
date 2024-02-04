@@ -33,11 +33,28 @@
  *? всі парні числа  від max до min  за спаданням
  */
 
-const max = 50;
-const min = 23;
+// const max = 50;
+// const min = 23;
 
-for (let i = max; i >= min; i -= 1) {
-  if (i % 2 === 0) {
-    console.log(i);
-  }
-}
+// for (let i = max; i >= min; i -= 1) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+
+/**
+ *? За кожен місяць податкова нараховує на ЗП розробника 5% від суми.
+ *? Напишіть функцію, у яку користувач вводить суму зп
+ *? і кількість місяців за допомогою prompt() не забуваємо, що prompt повертає рядок.
+  *? Для обчислення суми з урахуванням відсотків використовуйте цикл for.
+ */
+
+// function culcSalery() {
+//   const salary = Number(prompt('enter salery'));
+//   const manth = Number(prompt('Enter number of manth'));
+
+//   return salary * manth * 0.95;
+// }
+
+// console.log(culcSalery());
