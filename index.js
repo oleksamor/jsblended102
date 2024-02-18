@@ -46,7 +46,7 @@
  *? За кожен місяць податкова нараховує на ЗП розробника 5% від суми.
  *? Напишіть функцію, у яку користувач вводить суму зп
  *? і кількість місяців за допомогою prompt() не забуваємо, що prompt повертає рядок.
-  *? Для обчислення суми з урахуванням відсотків використовуйте цикл for.
+ *? Для обчислення суми з урахуванням відсотків використовуйте цикл for.
  */
 
 // function culcSalery() {
@@ -104,7 +104,6 @@ if (min > 45 && min <= 60) {
 
 **/
 
-
 /**
  *? Напиши скрипт для об'єкта user,
  *? послідовно:
@@ -114,7 +113,6 @@ if (min > 45 && min <= 60) {
  *? 4 виводить вміст об'єкта users у форматі
  *? ключ: значення використовуючи Object.keys() і for...of
  */
-
 
 // const user = {
 //   name: "John",
@@ -126,12 +124,11 @@ if (min > 45 && min <= 60) {
 // user.mood = 'happy';
 // user.hobby = 'skydiving';
 // user.premium = false;
- 
+
 // const keys = Object.keys(user);
 
 // for (const key of keys) {
 //   console.log(`${key}: ${user[key]}`);
-  
 
 // }
 
@@ -139,20 +136,45 @@ if (min > 45 && min <= 60) {
 
 /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
 
-const someObj = {
-    worker1: 360,
-    worker2: 750,
-    worker3: 240,
-  };
-  function salary(obj) {
-    let sum = 0;
-    const values = Object.values(obj);
+// const someObj = {
+//     worker1: 360,
+//     worker2: 750,
+//     worker3: 240,
+//   };
+//   function salary(obj) {
+//     let sum = 0;
+//     const values = Object.values(obj);
 
-    for (const num of values) {
-        sum += num;
+//     for (const num of values) {
+//         sum += num;
+//     }
+//     return sum;
+//   }
+
+// const total =  salary(someObj);
+// console.log(total);
+/*
+ *? Напишіть ф-цію calcTotalPrice(someStones, stoneName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція рахує та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+const stones = [
+  { name: "Изумруд", price: 1300, quantity: 4 },
+  { name: "Бриллиант", price: 2700, quantity: 6 },
+  { name: "Сапфир", price: 400, quantity: 7 },
+  { name: "Щебень", price: 150, quantity: 100 },
+];
+
+function calcTotalPrice(someStones, stoneName) {
+  for (let stone of someStones) {
+    if (stone.name === stoneName) {
+      return stone.price * stone.quantity;
     }
-    return sum;
   }
+  return "None";
+}
 
-const total =  salary(someObj);
-console.log(total);
+console.log(calcTotalPrice(stones, "asfasf"));
