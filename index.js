@@ -161,20 +161,51 @@ if (min > 45 && min <= 60) {
  *? з таким ім'ям, ціною та кількістю з об'єкта
  */
 
-const stones = [
-  { name: "Изумруд", price: 1300, quantity: 4 },
-  { name: "Бриллиант", price: 2700, quantity: 6 },
-  { name: "Сапфир", price: 400, quantity: 7 },
-  { name: "Щебень", price: 150, quantity: 100 },
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
+
+// function calcTotalPrice(someStones, stoneName) {
+//   for (let stone of someStones) {
+//     if (stone.name === stoneName) {
+//       return stone.price * stone.quantity;
+//     }
+//   }
+//   return "None";
+// }
+
+// console.log(calcTotalPrice(stones, "asfasf"));
+
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+
+// *? Надайте ід для кожного продукту
+
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
 ];
 
-function calcTotalPrice(someStones, stoneName) {
-  for (let stone of someStones) {
-    if (stone.name === stoneName) {
-      return stone.price * stone.quantity;
-    }
+function updFruits(array) {
+  const newArray = [];
+  let id = 1;
+  for (let fruit of array) {
+    fruit.price *= 0.8;
+
+    fruit.id = id;
+    id += 1;
+    newArray.push(fruit);
   }
-  return "None";
+
+  return newArray;
 }
 
-console.log(calcTotalPrice(stones, "asfasf"));
+console.log(updFruits(fruits));
+console.log(fruits);
