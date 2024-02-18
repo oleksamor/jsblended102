@@ -187,25 +187,49 @@ if (min > 45 && min <= 60) {
 
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-function updFruits(array) {
-  const newArray = [];
-  let id = 1;
-  for (let fruit of array) {
-    fruit.price *= 0.8;
+// function updFruits(array) {
+//   const newArray = [];
+//   let id = 1;
+//   for (let fruit of array) {
+//     fruit.price *= 0.8;
 
-    fruit.id = id;
-    id += 1;
-    newArray.push(fruit);
-  }
+//     fruit.id = id;
+//     id += 1;
+//     newArray.push(fruit);
+//   }
 
-  return newArray;
-}
+//   return newArray;
+// }
 
-console.log(updFruits(fruits));
-console.log(fruits);
+// console.log(updFruits(fruits));
+// console.log(fruits);
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+const arr = ["best", "the", "foo", "is", "js"];
+// const copyArr = [...arr];
+// const index = copyArr.indexOf("kra");
+// if (index === -1) return;
+// const res = copyArr.splice(index, 1);
+
+// copyArr.reverse();
+// const string = copyArr.join(" ");
+// console.log(string);
+// console.log(arr);
+
+const string = arr
+    .slice(0, arr.indexOf("foo"))
+    .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+    .reverse()
+    .join(" ");
+
+console.log(string);
