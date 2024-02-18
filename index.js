@@ -116,23 +116,43 @@ if (min > 45 && min <= 60) {
  */
 
 
-const user = {
-  name: "John",
-  age: 20,
-  hobby: "tennis",
-  premium: true,
-};
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+// };
 
-user.mood = 'happy';
-user.hobby = 'skydiving';
-user.premium = false;
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = false;
  
-const keys = Object.keys(user);
+// const keys = Object.keys(user);
 
-for (const key of keys) {
-  console.log(`${key}: ${user[key]}`);
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
   
 
-}
+// }
 
-console.log(keys)
+// console.log(keys)
+
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+
+const someObj = {
+    worker1: 360,
+    worker2: 750,
+    worker3: 240,
+  };
+  function salary(obj) {
+    let sum = 0;
+    const values = Object.values(obj);
+
+    for (const num of values) {
+        sum += num;
+    }
+    return sum;
+  }
+
+const total =  salary(someObj);
+console.log(total);
