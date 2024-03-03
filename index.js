@@ -67,6 +67,7 @@
 //  *? Після того як користувач припинив введення, натиснувши на
 //  *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
 
+/*
 //  *! Робити перевірку, що користувач ввів саме число,
 //  *! а не довільний набір символів не потрібно.
 //  */
@@ -215,6 +216,7 @@ if (min > 45 && min <= 60) {
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
 
+/*
 const arr = ["best", "the", "foo", "is", "js"];
 // const copyArr = [...arr];
 // const index = copyArr.indexOf("kra");
@@ -233,3 +235,27 @@ const string = arr
     .join(" ");
 
 console.log(string);
+*/
+
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+function updFruits(array) {
+  return array.map((fruit, index) => {
+    return {
+      ...fruit,
+      id: index + 1,
+      price: fruit.price * 0.8,
+    };
+  });
+}
+
+console.log(updFruits(fruits));
