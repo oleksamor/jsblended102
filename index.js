@@ -239,7 +239,7 @@ if (min > 45 && min <= 60) {
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
+/*const fruits = [
   { name: "apple", price: 200 },
   { name: "orange", price: 300 },
   { name: "grapes", price: 750 },
@@ -254,4 +254,20 @@ function updFruits (array){
   })
 
 }
-console.log(updFruits (fruits));
+console.log(updFruits (fruits));*/
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+function newArr(arr) {
+  return arr.filter((item) => item.likes > 3)
+}
+
+console.log(newArr(tweets));
+
+/**Створити функцію яка приймає масив об'єктів і повертає масив тільки з тіма об'єктами, які у який лайків більше трьох */
