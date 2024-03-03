@@ -256,6 +256,37 @@ function updFruits (array){
 }
 console.log(updFruits (fruits));*/
 
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// /**Створити функцію яка приймає масив об'єктів і повертає масив тільки з тіма об'єктами, які у який лайків більше трьох */
+
+// // function newArr(arr) {
+// //   return arr.filter((item) => item.likes > 3)
+// // }
+
+// // console.log(newArr(tweets));
+
+// // Функція приймає масив об'єктів і повертає  відсортований масив по кількості тегів, по спаданню
+
+// function newArray(arr) {
+//   return arr.toSorted((a, b) => b.tags.length - a.tags.length);
+// }
+
+// console.log(newArray(tweets));
+
+/*TODO:==============================================
+/**
+*? Поверніть об'єкт, в якому вказано кількість тегів.
+*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+*/
+
 const tweets = [
   { id: "000", likes: 5, tags: ["js", "nodejs"] },
   { id: "001", likes: 2, tags: ["html", "css"] },
@@ -264,18 +295,10 @@ const tweets = [
   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
 ];
 
-/**Створити функцію яка приймає масив об'єктів і повертає масив тільки з тіма об'єктами, які у який лайків більше трьох */
+const tags = tweets.flatMap((tweet) => tweet.tags);
 
-// function newArr(arr) {
-//   return arr.filter((item) => item.likes > 3)
-// }
+const result = tags.reduce((acc, tag) => {
+  return { ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 };
+}, {});
 
-// console.log(newArr(tweets));
-
-// Функція приймає масив об'єктів і повертає  відсортований масив по кількості тегів, по спаданню
-
-function newArray(arr) {
-  return arr.toSorted((a, b) => b.tags.length - a.tags.length);
-}
-
-console.log(newArray(tweets));
+console.log(result);
