@@ -242,6 +242,7 @@ console.log(string);
 // *? Надайте ід для кожного продукту
 // */
 
+/*
 const fruits = [
   { name: "apple", price: 200 },
   { name: "orange", price: 300 },
@@ -259,3 +260,20 @@ function updFruits(array) {
 }
 
 console.log(updFruits(fruits));
+*/
+
+//Створити функцію яка приймає масив об'єктів і повертає масив тільки з тіма об'єктами, які у який лайків більше трьох
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+function newArray(arr) {
+  return arr.filter((tweet) => tweet.likes > 3);
+}
+
+console.log(newArray(tweets));
