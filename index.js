@@ -264,10 +264,18 @@ const tweets = [
   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
 ];
 
-function newArr(arr) {
-  return arr.filter((item) => item.likes > 3)
+/**Створити функцію яка приймає масив об'єктів і повертає масив тільки з тіма об'єктами, які у який лайків більше трьох */
+
+// function newArr(arr) {
+//   return arr.filter((item) => item.likes > 3)
+// }
+
+// console.log(newArr(tweets));
+
+// Функція приймає масив об'єктів і повертає  відсортований масив по кількості тегів, по спаданню
+
+function newArray(arr) {
+  return arr.toSorted((a, b) => b.tags.length - a.tags.length);
 }
 
-console.log(newArr(tweets));
-
-/**Створити функцію яка приймає масив об'єктів і повертає масив тільки з тіма об'єктами, які у який лайків більше трьох */
+console.log(newArray(tweets));
