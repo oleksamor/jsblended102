@@ -7,11 +7,8 @@
 const btn = document.querySelector("#alertButton");
 const inputEl = document.querySelector("#alertInput");
 btn.addEventListener("click", () => {
-    console.log(inputEl.value);
-})
-
-
-
+  console.log(inputEl.value);
+});
 
 //TODO:==============================================
 /*
@@ -19,7 +16,6 @@ btn.addEventListener("click", () => {
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
-
 
 const btnEl = document.querySelector("#swapButton");
 const leftSwapInputEl = document.querySelector("#leftSwapInput");
@@ -43,23 +39,37 @@ btnEl.addEventListener("click", () => {
 const btnRef = document.querySelector("#passwordButton");
 const inputRef = document.querySelector("#passwordInput");
 
-btnRef.addEventListener('click', () => {
-   if (btnRef.textContent === 'Розкрити') {
-    btnRef.textContent = 'Приховати'
-     inputRef.setAttribute('type', 'text')
-     return;
+btnRef.addEventListener("click", () => {
+  if (btnRef.textContent === "Розкрити") {
+    btnRef.textContent = "Приховати";
+    inputRef.setAttribute("type", "text");
+    return;
   }
-  btnRef.textContent = 'Розкрити';
-  inputRef.setAttribute('type', 'password');
-
- 
-})
+  btnRef.textContent = "Розкрити";
+  inputRef.setAttribute("type", "password");
+});
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
 
+const boxEl = document.querySelector("#box");
+const decreaseBtnEl = document.querySelector("#decrease");
+const increaseBtnEl = document.querySelector("#increase");
+
+decreaseBtnEl.addEventListener("click", () => {
+  const boxSize = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = boxSize - 10 + "px";
+  boxEl.style.height = boxSize - 10 + "px";
+  console.log(boxSize);
+});
+
+increaseBtnEl.addEventListener("click", () => {
+  const boxSize = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = boxSize + 10 + "px";
+  boxEl.style.height = boxSize + 10 + "px";
+});
 //TODO:==============================================
 /*
 Завдання 5
