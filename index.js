@@ -4,12 +4,22 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
 
+const btn = document.querySelector("#alertButton");
+const inputEl = document.querySelector("#alertInput");
+btn.addEventListener("click", () => {
+    console.log(inputEl.value);
+})
+
+
+
+
 //TODO:==============================================
 /*
 Завдання 2
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+
 
 const btnEl = document.querySelector("#swapButton");
 const leftSwapInputEl = document.querySelector("#leftSwapInput");
